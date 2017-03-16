@@ -1,0 +1,11 @@
+body {
+  background-image: url(moro.jpg);
+
+  padding-left: 200px;
+   font-family: 'NaziTypewriterRegular';
+   font-weight: normal;
+   font-style: normal;
+}
+.data {
+  margin-left: 50rem;
+}
