@@ -1,0 +1,14 @@
+.loader {
+  border: 10px solid lightblue;
+  border-top: 10px solid #0066cc;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  animation: krecic 3s;
+  animation-iteration-count: 15;
+
+}
+@keyframes krecic {
+0% {transform: rotate(0deg);}
+100% {transform: rotate(360deg);}
+}
