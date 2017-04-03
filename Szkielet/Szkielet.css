@@ -1,11 +1,21 @@
 body {
-  background-image: url(moro.jpg);
-
-  padding-left: 200px;
-   font-family: 'NaziTypewriterRegular';
-   font-weight: normal;
-   font-style: normal;
+    background-image: url(moro.jpg);
+    font-family: 'Cutive Mono', sans-serif;
+    padding-left: 200px;
+    font-weight: normal;
+    font-style: normal;
 }
 .data {
-  margin-left: 50rem;
+    display: flex;
+    margin-left: 80%;
+}
+#h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+}
+.fa fa-fighter-jet {
+    display: flex;
+    
+    margin-left: 80%;
 }
