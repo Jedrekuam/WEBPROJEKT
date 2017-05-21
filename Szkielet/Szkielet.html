@@ -13,18 +13,19 @@
 
     <header id="h1"> Lista zadań </header>
 <textarea rows="8" cols="80" id="comments">
-Tu wpisz swoje zadanie...
+                     Tu wpisz swoje zadanie...
 </textarea>
 <p>
 </p>
-<input type="submit" value="Wykonać!" class="button" />
-<p> Następne zadania: </p>
-<footer> Przykładowe:
-  <section>
+<input type="button" value="Wykonać!" class="button" onclick="list()" />
+<footer class="content">  Następne zadania: <br> </br>
+
+  <section id="lista">
       <p> <input type="checkbox" /> Posprzątać</p>
       <p> <input type="checkbox" /> Upolować</p>
       <p> <input type="checkbox" /> Zbombardować</p>
     </section>
+    </footer>
     <a class="btn btn-danger" href="#">
   <i class="fa fa-trash-o fa-lg"></i> Delete</a>
 
