@@ -11,13 +11,19 @@ function List() {
 	else {
 	
 	var field = document.createElement('input');
-	field.setAttribute('type', 'radio'); //kształt 'radio' do 'odkliknięcia'
+	field.setAttribute('type', 'checkbox'); 
 	
+	var field2 = document.createElement('input'); // +++
+	field2.setAttribute('type', 'button'); 		// +++
+	field2.setAttribute('value', 'Usuń');		// +++
+	field2.setAttribute('id', 'li'+ arr_numer);	// +++
+
 	arr[arr_numer]= duty2; //do tablicy trafiają wpisane elementy
 var order = document.createElement('li'); //utworzenie elementu i przechowanie go w zmiennej
 var new_order = document.createTextNode(arr[arr_numer]);
 
-order.appendChild(field); 
+order.appendChild(field);
+order.appendChild(field2); 		// +++
 order.appendChild(new_order); 
 
 duty.appendChild(order);
@@ -26,10 +32,17 @@ document.getElementById('comments').value=""; //po wpisaniu zadania odświeża p
 	}
 arr_numer++;
 }
-
+var usun = document.getElementById('li' + arr_numer); // +++
+usun.addEventListener('click', List, false); // +++
 var dodaj = document.getElementById('button');
 dodaj.addEventListener('click', List, false);
+document.addEventListener('keydown', function(event){
+	if(event.keyCode == 13) {
+		List();
+	}
+});
 
+/*
 function Rmv() {
 	var del = document.getElementsByTagName('li')[0];
 	//while (del.hasChildNodes()) {
@@ -37,9 +50,9 @@ function Rmv() {
 	//}
 	var ojciec = del.parentNode;
 	ojciec.removeChild(del);
-}
-var usun = document.getElementById('button2');
-usun.addEventListener('click', Rmv, false); //funkcja usuwa elementy od pierwszego do ostatniego
+} */
+//var usun = document.getElementById('button2');
+//usun.addEventListener('click', Rmv, false); //funkcja usuwa elementy od pierwszego do ostatniego
 
 var date = new Date(); //ustawianie daty. Z tym akurat problemów nie było
  var daysOfWeek = ['poniedzia�ek', 'wtorek', '�roda', 'czwartek', 'pi�tek', 'sobota', 'niedziela'];
