@@ -1,8 +1,24 @@
 
-var arr = new Array();
+var arr = new Object();
+var arr_obj = [];
 var arr_numer = 0;
 var duty = document.getElementById('lista');
 
+function addElem {
+	
+	for (var i=0; i<arr_obj.length; i++) {
+		var liEl = document.createElement('li');
+		var field2 = document.createElement('input'); // od usuwania
+		
+		field2.setAttribute('id', i);
+		field2.setAttribute('type', 'button');
+		field2.setAttribute('value', 'Wykonano');
+		liEl.appendChild(field2);
+		
+		field2.addEventListener('click', Rmv, false);
+		
+	}
+}
 
 function List() {
 	var duty2 = document.getElementById("comments").value;
@@ -13,17 +29,17 @@ function List() {
 	var field = document.createElement('input');
 	field.setAttribute('type', 'checkbox'); 
 	
-	var field2 = document.createElement('input'); // +++
+	/* var field2 = document.createElement('input'); // +++
 	field2.setAttribute('type', 'button'); 		// +++
 	field2.setAttribute('value', 'Usuń');		// +++
 	field2.setAttribute('id', 'li'+ arr_numer);	// +++
-
+*/
 	arr[arr_numer]= duty2; //do tablicy trafiają wpisane elementy
 var order = document.createElement('li'); //utworzenie elementu i przechowanie go w zmiennej
 var new_order = document.createTextNode(arr[arr_numer]);
 
 order.appendChild(field);
-order.appendChild(field2); 		// +++
+//order.appendChild(field2); 		// +++
 order.appendChild(new_order); 
 
 duty.appendChild(order);
@@ -42,15 +58,18 @@ document.addEventListener('keydown', function(event){
 	}
 });
 
-/*
-function Rmv() {
-	var del = document.getElementsByTagName('li')[0];
-	//while (del.hasChildNodes()) {
-	//	del.removeChild(del.lastChild);
-	//}
+
+function Rmv(event) {
+	//var target = event.target;
+//arrayObjects.splice(target.id,1);
+	
+	var del = document.getElementsById('i');
+	while (del.hasChildNodes()) {
+		del.removeChild(del.lastChild);
+	}
 	var ojciec = del.parentNode;
-	ojciec.removeChild(del);
-} */
+	ojciec.removeChild(del); 
+} 
 //var usun = document.getElementById('button2');
 //usun.addEventListener('click', Rmv, false); //funkcja usuwa elementy od pierwszego do ostatniego
 
